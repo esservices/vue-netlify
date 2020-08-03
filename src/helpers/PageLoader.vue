@@ -17,9 +17,9 @@ import {
 } from "../helpers/AppHelpers";
 
 const getContentUrl = () => {
-  const languages = getLanguages();
+  //const languages = getLanguages();
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
-  const currentLanguage = getCurrentLanguage();
+  //const currentLanguage = getCurrentLanguage();
   let path =
     nodeName +
     window.location.pathname.replace(
@@ -27,12 +27,12 @@ const getContentUrl = () => {
       ""
     );
 
-  if (currentLanguage !== languages[0]) {
+/*  if (currentLanguage !== languages[0]) {
     path = removeCurrentLanguage(path, currentLanguage);
     path += "?lang=" + currentLanguage;
-  }
+  }*/
 
-  return process.env.VUE_APP_REST_PAGES + path;
+  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + this.$language;
 };
 
 export default {

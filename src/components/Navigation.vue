@@ -53,7 +53,8 @@ export default {
 
   methods: {
     clickLanguage: function(language) {
-      changeLanguage(language);
+      this.$language = language;
+      //changeLanguage(language);
     }
   }
 };

@@ -7,6 +7,9 @@ Vue.config.productionTip = false;
 Vue.config.devtools = true;
 Vue.use(VueRouter);
 
+// Language management
+Vue.prototype.$language = "en"
+
 const VUE_APP_BASE = process.env.VUE_APP_SITE_BASENAME;
 
 const router = new VueRouter({
