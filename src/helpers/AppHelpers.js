@@ -5,7 +5,7 @@ export function getLanguages() {
 /*
 export function removeCurrentLanguage(string, currentLanguage) {
   return string.replace(new RegExp('/' + currentLanguage + '($|/)'), '/');
-}
+}*/
 
 export function getCurrentLanguage() {
   const languages = getLanguages();
@@ -21,6 +21,7 @@ export function getCurrentLanguage() {
   return languages[0];
 }
 
+/*
 export function changeLanguage(newLanguage) {
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
   const languages = getLanguages();
