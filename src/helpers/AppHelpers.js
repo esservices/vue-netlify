@@ -2,6 +2,7 @@ export function getLanguages() {
   return process.env.VUE_APP_LANGUAGES.split(' ');
 }
 
+/*
 export function removeCurrentLanguage(string, currentLanguage) {
   return string.replace(new RegExp('/' + currentLanguage + '($|/)'), '/');
 }
@@ -37,6 +38,7 @@ export function changeLanguage(newLanguage) {
 
   window.location.href = window.location.origin + pathname + window.location.search;
 }
+*/
 
 export function getRouterBasename() {
   const nodeName = process.env.VUE_APP_SITE_BASENAME;

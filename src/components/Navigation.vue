@@ -9,7 +9,6 @@
       <span
         v-for="language in languages"
         :key="language"
-        :data-active="currentLanguage === language"
         @click="clickLanguage(language)"
       >{{ language }}</span>
     </div>
@@ -29,7 +28,6 @@ export default {
     return {
       pagenav: [],
       languages: getLanguages(),
-      currentLanguage: getCurrentLanguage()
     };
   },
 
