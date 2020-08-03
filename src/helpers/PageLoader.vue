@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async loadPage() {
-      const lang = this.$router.params.lang;
+      const lang = this.$route.params.lang;
       const contentResponse = await fetch(getContentUrl(lang));
       const content = await contentResponse.json();
 
