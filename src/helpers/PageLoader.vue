@@ -27,7 +27,7 @@ const getContentUrl = () => {
     path += "?lang=" + currentLanguage;
   }*/
 
-  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + this.$language;
+  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + this.$router.params.lang;
 };
 
 export default {

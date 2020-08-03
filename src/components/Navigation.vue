@@ -49,8 +49,7 @@ export default {
 
   methods: {
     clickLanguage: function(language) {
-      this.$language = language;
-      //changeLanguage(language);
+      this.$router.push('/'+language+window.location.pathname);
     }
   }
 };
