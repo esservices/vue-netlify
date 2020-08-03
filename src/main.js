@@ -7,7 +7,7 @@ Vue.config.productionTip = false;
 Vue.config.devtools = true;
 Vue.use(VueRouter);
 
-const VUE_APP_BASE = process.env.VUE_APP_MGNL_BASENAME + process.env.VUE_APP_SITE_BASENAME;
+const VUE_APP_BASE = process.env.VUE_APP_SITE_BASENAME;
 
 const router = new VueRouter({
   mode: 'history',
