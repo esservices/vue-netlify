@@ -11,7 +11,7 @@
 import config from "../magnolia.config";
 import { EditablePage, inEditorEdit } from "../vue-editor";
 
-const getContentUrl = () => {
+const getContentUrl = (lang) => {
   //const languages = getLanguages();
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
   //const currentLanguage = getCurrentLanguage();
@@ -27,7 +27,7 @@ const getContentUrl = () => {
     path += "?lang=" + currentLanguage;
   }*/
 
-  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + this.$router.params.lang;
+  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + lang;
 };
 
 export default {
@@ -44,7 +44,8 @@ export default {
   },
   methods: {
     async loadPage() {
-      const contentResponse = await fetch(getContentUrl());
+      const lang = this.$router.params.lang;
+      const contentResponse = await fetch(getContentUrl(lang));
       const content = await contentResponse.json();
 
       if (inEditorEdit) {
