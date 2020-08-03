@@ -10,9 +10,13 @@
 <script>
 import config from "../magnolia.config";
 import { EditablePage, inEditorEdit } from "../vue-editor";
+import {
+  getLanguages,
+  removeCurrentLanguage
+} from "../helpers/AppHelpers";
 
 const getContentUrl = (lang) => {
-  //const languages = getLanguages();
+  const languages = getLanguages();
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
   //const currentLanguage = getCurrentLanguage();
   let path =
@@ -27,7 +31,12 @@ const getContentUrl = (lang) => {
     path += "?lang=" + currentLanguage;
   }*/
 
-  return process.env.VUE_APP_REST_PAGES + path + "?lang=" + lang;
+  if (lang) {
+    path = removeCurrentLanguage(path, currentLanguage);
+    path += "?lang=" + lang;
+  }
+
+  return process.env.VUE_APP_REST_PAGES + path;
 };
 
 export default {

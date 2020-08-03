@@ -2,10 +2,9 @@ export function getLanguages() {
   return process.env.VUE_APP_LANGUAGES.split(' ');
 }
 
-/*
 export function removeCurrentLanguage(string, currentLanguage) {
   return string.replace(new RegExp('/' + currentLanguage + '($|/)'), '/');
-}*/
+}
 
 export function getCurrentLanguage() {
   const languages = getLanguages();
