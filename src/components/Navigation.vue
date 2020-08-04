@@ -50,6 +50,7 @@ export default {
   methods: {
     clickLanguage: function(language) {
       this.$root.lang = language;
+      this.$router.push({ path: process.env.VUE_APP_SITE_BASENAME});
     }
   }
 };
