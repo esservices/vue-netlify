@@ -18,8 +18,7 @@
 
 <script>
 import {
-  getLanguages,
-  removeCurrentLanguage
+  getLanguages
 } from "../helpers/AppHelpers";
 
 export default {
@@ -52,9 +51,10 @@ export default {
   methods: {
     clickLanguage: function(language) {
       this.$root.lang = language;
-      let path = this.$route.fullPath;
-      path = removeCurrentLanguage(path, language);
-      this.$router.push({ path: '/'+language+path});
+      //let path = this.$route.fullPath;
+      //path = removeCurrentLanguage(path, language);
+      //this.$router.push({ path: '/'+language+path});
+      this.$router.push({ path: '/'+language+process.env.VUE_APP_SITE_BASENAME});
     }
   }
 };
