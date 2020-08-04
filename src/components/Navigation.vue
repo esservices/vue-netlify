@@ -6,13 +6,11 @@
       v-bind:to="item['@name']"
     >{{ item.title }}</router-link>
     <div class="languages">
-      <span>
-        <router-link
+      <span
         v-for="language in languages"
         :key="language"
-        v-bind:to="{ path: site, params: { lang: language }}"
-      >{{ language }}</router-link>
-      </span>
+        @click="clickLanguage(language)"
+      >{{ language }}</span>
     </div>
   </nav>
 </template>
@@ -29,7 +27,6 @@ export default {
     return {
       pagenav: [],
       languages: getLanguages(),
-      site: process.env.VUE_APP_SITE_BASENAME
     };
   },
 
@@ -53,11 +50,7 @@ export default {
 
   methods: {
     clickLanguage: function(language) {
-      let url = '/'+language+process.env.VUE_APP_SITE_BASENAME+this.$route.path;
-      if (this.$route.params.lang) {
-        url = removeCurrentLanguage(url, this.$route.params.lang);
-      }
-      this.$router.push(url);
+      this.$root.lang = language;
     }
   }
 };
