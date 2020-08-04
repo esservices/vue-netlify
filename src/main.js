@@ -11,7 +11,6 @@ const VUE_APP_BASE = process.env.VUE_APP_SITE_BASENAME;
 
 const router = new VueRouter({
   mode: 'history',
-  base: VUE_APP_BASE,
   routes: [{ path: '/:lang?/*', component: PageLoader }],
 });
 
