@@ -17,7 +17,7 @@ const router = new VueRouter({
 new Vue({
   router,
   data: {
-    lang: ''
+    lang: 'en'
   },
   render: (h) => h(App),
 }).$mount('#app');
