@@ -17,8 +17,7 @@
 
 <script>
 import {
-  getLanguages,
-  removeCurrentLanguage
+  getLanguages
 } from "../helpers/AppHelpers";
 
 export default {
