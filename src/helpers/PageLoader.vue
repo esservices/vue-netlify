@@ -10,9 +10,6 @@
 <script>
 import config from "../magnolia.config";
 import { EditablePage, inEditorEdit } from "../vue-editor";
-import {
-  removeCurrentLanguage
-} from "../helpers/AppHelpers";
 
 const getContentUrl = (lang) => {
   //const languages = getLanguages();
