@@ -15,20 +15,14 @@ import {
 } from "../helpers/AppHelpers";
 
 const getContentUrl = (lang) => {
-  //const languages = getLanguages();
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
-  //const currentLanguage = getCurrentLanguage();
+
   let path =
     nodeName +
     window.location.pathname.replace(
       new RegExp("(.*" + nodeName + "|.html)", "g"),
       ""
     );
-
-/*  if (currentLanguage !== languages[0]) {
-    path = removeCurrentLanguage(path, currentLanguage);
-    path += "?lang=" + currentLanguage;
-  }*/
 
   if (lang) {
     path = removeCurrentLanguage(path, lang);
@@ -52,7 +46,7 @@ export default {
   },
   methods: {
     async loadPage() {
-      const lang = this.$root.lang;//this.$route.params.lang;
+      const lang = this.$root.lang;
       const contentResponse = await fetch(getContentUrl(lang));
       const content = await contentResponse.json();
 

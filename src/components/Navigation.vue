@@ -9,6 +9,7 @@
       <span
         v-for="language in languages"
         :key="language"
+        :data-active="$root.lang === language"
         @click="clickLanguage(language)"
       >{{ language }}</span>
     </div>
