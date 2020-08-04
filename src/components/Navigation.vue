@@ -50,7 +50,7 @@ export default {
 
   methods: {
     clickLanguage: function(language) {
-      const url = '/'+language+process.env.VUE_APP_SITE_BASENAME+this.$route.path;
+      let url = '/'+language+process.env.VUE_APP_SITE_BASENAME+this.$route.path;
       if (this.$route.params.lang) {
         url = removeCurrentLanguage(url, this.$route.params.lang);
       }
