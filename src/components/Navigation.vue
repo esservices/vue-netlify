@@ -50,8 +50,7 @@ export default {
   methods: {
     clickLanguage: function(language) {
       //this.$router.push('/'+language+window.location.pathname);
-      const lang = language;
-      this.$router.push({ path: '/${lang}'+window.location.pathname });
+      this.$router.push({ path: window.location.pathname, params: language });
     }
   }
 };
