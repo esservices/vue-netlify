@@ -10,7 +10,7 @@
         <router-link
         v-for="language in languages"
         :key="language"
-        v-bind:to="{ path: '/'+language+$route.fullPath}"
+        v-bind:to="{ path: $route.fullPath, params: { lang: language }}"
       >{{ language }}</router-link>
       </span>
     </div>

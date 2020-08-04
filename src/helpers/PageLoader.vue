@@ -31,7 +31,7 @@ const getContentUrl = (lang) => {
   }*/
 
   if (lang) {
-    path = removeCurrentLanguage(path, lang);
+    //path = removeCurrentLanguage(path, lang);
     path += "?lang=" + lang;
   }
 

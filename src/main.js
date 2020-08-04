@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
-  routes: [{ path: '/:lang?/*', component: PageLoader }],
+  routes: [{ path: '*', component: PageLoader }],
 });
 
 new Vue({
