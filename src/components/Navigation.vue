@@ -6,11 +6,13 @@
       v-bind:to="item['@name']"
     >{{ item.title }}</router-link>
     <div class="languages">
-      <span
+      <span>
+        <router-link
         v-for="language in languages"
         :key="language"
-        @click="clickLanguage(language)"
-      >{{ language }}</span>
+        v-bind:to="{ path: this.$route.fullPath, params: { lang: language }}"
+      >{{ language }}</router-link>
+      </span>
     </div>
   </nav>
 </template>
