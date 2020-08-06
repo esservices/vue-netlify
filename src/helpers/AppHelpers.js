@@ -22,7 +22,6 @@ export function removeLanguage(string) {
     
   }
 
-  console.log('langsExpr:'+langsExpr);
   return string.replace(new RegExp(langsExpr), '/');
 }
 
