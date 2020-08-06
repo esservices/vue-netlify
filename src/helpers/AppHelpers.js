@@ -6,6 +6,26 @@ export function removeCurrentLanguage(string, currentLanguage) {
   return string.replace(new RegExp('/' + currentLanguage + '($|/)'), '/');
 }
 
+export function removeLanguage(string) {
+  const languages = getLanguages();
+
+  let langsExpr = '';
+
+  for (let i = 0; i < languages.length; i++) {
+    const language = languages[i];
+    
+    if ((i+1) < languages.length) {
+      langsExpr =+ '|'
+    }
+
+    langsExpr =+ '/' + language + '($|/)';
+    
+  }
+
+  console.log('langsExpr:'+langsExpr);
+  return string.replace(new RegExp(langsExpr), '/');
+}
+
 export function getCurrentLanguage() {
   const languages = getLanguages();
 
