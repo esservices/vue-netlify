@@ -15,7 +15,7 @@ export function removeLanguage(string) {
     const language = languages[i];
     
     if (i!=0) {
-      langsExpr =+ '|'
+      langsExpr += '|'
     }
 
     langsExpr += '/' + language + '($|/)';
