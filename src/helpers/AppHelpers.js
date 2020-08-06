@@ -39,26 +39,6 @@ export function getCurrentLanguage() {
   return languages[0];
 }
 
-/*
-export function changeLanguage(newLanguage) {
-  const nodeName = process.env.VUE_APP_SITE_BASENAME;
-  const languages = getLanguages();
-  let pathname = window.location.pathname;
-  const currentLanguage = getCurrentLanguage();
-  pathname = removeCurrentLanguage(pathname, currentLanguage);
-
-  if (languages[0] !== newLanguage) {
-    if (pathname.indexOf(nodeName) > -1) {
-      pathname = pathname.replace(new RegExp(nodeName), '/' + newLanguage + nodeName);
-    } else {
-      pathname = '/' + newLanguage + pathname;
-    }
-  }
-
-  window.location.href = window.location.origin + pathname + window.location.search;
-}
-*/
-
 export function getRouterBasename() {
   const nodeName = process.env.VUE_APP_SITE_BASENAME;
   const languages = getLanguages();

@@ -55,7 +55,6 @@ export default {
       let path = this.$route.fullPath;
       path = removeLanguage(path);
       this.$router.push({ path: '/'+language+path});
-      //this.$router.push({ path: '/'+language+process.env.VUE_APP_SITE_BASENAME});
     }
   }
 };
