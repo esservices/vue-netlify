@@ -14,11 +14,11 @@ export function removeLanguage(string) {
   for (let i = 0; i < languages.length; i++) {
     const language = languages[i];
     
-    if ((i+1) < languages.length) {
+    if (i!=0) {
       langsExpr =+ '|'
     }
 
-    langsExpr =+ '/' + language + '($|/)';
+    langsExpr += '/' + language + '($|/)';
     
   }
 
