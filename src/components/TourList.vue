@@ -18,7 +18,7 @@ import axios from "axios";
 
 const API_ENDPOINT = process.env.VUE_APP_REST_TOURS;
 
-const IMAGE_BASE = process.env.VUE_APP_ORIGIN;
+const IMAGE_BASE = process.env.VUE_APP_DAM_BASE_URL;
 
 
 
